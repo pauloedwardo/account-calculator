@@ -1,0 +1,16 @@
+[
+  {
+    "_id" : "6fbe2532-395e-4829-97d3-631dd61e60eb",
+    "name" : "Andy Timmons",
+    "document" : "123456",
+    "balance": 10,
+    "zipCode": "18013004"
+  },
+  {
+    "_id" : "6fbe2532-395e-4829-97d3-631dd61e60zz",
+    "name" : "Joe Satriani",
+    "document" : "654321",
+    "balance": 20,
+    "zipCode": "18103540"
+  }
+]

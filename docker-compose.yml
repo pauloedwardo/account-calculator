@@ -1,0 +1,33 @@
+version: "3.1"
+
+services:
+  account-calculator:
+    build: .
+    restart: always
+    container_name: accounts-calculator
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: accounts-calculator-mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - $HOME/data/accounts-calculator-data:/data/db
+      - $HOME/data/accounts-calculator-bkp:/data/bkp
+    restart: always
+
+  mongo-express-account-calculator:
+    image: mongo-express:latest
+    ports:
+      - 8081:8081
+    depends_on:
+      - mongo
+
+  mongo-init:
+    build: ./mongo-init
+    depends_on:
+      - mongo
