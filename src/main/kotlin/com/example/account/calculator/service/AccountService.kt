@@ -10,10 +10,16 @@ class AccountService(val repository: AccountRepository, val updateBalanceService
     fun get(document: String): Account {
         val account = repository.findByDocument(document).get()
 
-        var newBalance = updateBalanceService.execute(account)
+        updateBalanceService.execute(account)
+
+        save(account)
 
         return account
     }
 
     fun getAll(): List<Account> = repository.findAll()
+
+    fun save(account: Account) {
+        repository.save(account)
+    }
 }
