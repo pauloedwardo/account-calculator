@@ -2,6 +2,7 @@ package com.example.account.calculator.service.external
 
 import com.example.account.calculator.model.Address
 import mu.KotlinLogging
+import org.springframework.cache.annotation.Cacheable
 import org.springframework.stereotype.Service
 
 private val logger = KotlinLogging.logger {}
@@ -9,6 +10,7 @@ private val logger = KotlinLogging.logger {}
 @Service
 class AddressService(val addressClient: AddressClient) {
 
+    @Cacheable(cacheNames = ["zipcode-account-cache"], key = "#zipCode")
     fun get(zipCode: String): Address? {
         logger.info("Calling address api to zipcode $zipCode")
 

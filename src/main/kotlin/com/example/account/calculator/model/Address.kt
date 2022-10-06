@@ -1,5 +1,7 @@
 package com.example.account.calculator.model
 
+import java.io.Serializable
+
 data class Address(
     val cep: String,
     val logradouro: String,
@@ -11,4 +13,4 @@ data class Address(
     val gia: String,
     val ddd: String,
     val siafi: String,
-)
+): Serializable
