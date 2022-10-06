@@ -1,18 +1,14 @@
 package com.example.account.calculator.service
 
 import com.example.account.calculator.model.Account
-import com.example.account.calculator.repository.AccountRepository
+import com.example.account.calculator.service.external.AddressClient
 import org.springframework.stereotype.Service
 
 @Service
-class UpdateBalanceService(val repository: AccountRepository) {
+class UpdateBalanceService(val addressClient: AddressClient) {
 
     fun execute(account: Account) {
-        print("zip code received ${account.zipCode}")
-
-        //chamar API
-
-        //calcular
+        val response = addressClient.getAddress(account.zipCode)
 
     }
 }
