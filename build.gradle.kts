@@ -30,6 +30,7 @@ dependencies {
 	implementation ("io.github.microutils:kotlin-logging-jvm:2.0.11")
 //	testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("io.mockk:mockk:1.13.2")
 }
 
 dependencyManagement {

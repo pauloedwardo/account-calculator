@@ -8,11 +8,13 @@ import org.springframework.stereotype.Service
 @Service
 class UpdateBalanceService(val addressService: AddressService) {
 
-    fun execute(account: Account) {
+    fun execute(account: Account): Account {
         val response = addressService.get(account.zipCode)
 
         if (response != null && "SP" == response.uf) {
             account.balance = account.balance?.times(2)
         }
+
+        return account
     }
 }

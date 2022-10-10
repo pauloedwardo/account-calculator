@@ -10,11 +10,11 @@ class AccountService(val repository: AccountRepository, val updateBalanceService
     fun get(document: String): Account {
         val account = repository.findByDocument(document).get()
 
-        updateBalanceService.execute(account)
+        val updatedAccount = updateBalanceService.execute(account)
 
-        save(account)
+        save(updatedAccount)
 
-        return account
+        return updatedAccount
     }
 
     fun getAll(): List<Account> = repository.findAll()
