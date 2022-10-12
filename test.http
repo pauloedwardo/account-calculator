@@ -1,0 +1,9 @@
+POST http://localhost:8080/accounts
+Content-Type: application/json
+
+{
+  "name": "Joe Satriani",
+  "document": "zxcv",
+  "balance": 5,
+  "zipCode": "18013004"
+}
