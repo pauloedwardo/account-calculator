@@ -6,7 +6,7 @@ import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 
-@FeignClient(name = "address-client", url = "viacep.com.br")
+@FeignClient(name = "address-client", url = "\${feign.rest.address.url}")
 interface AddressClient {
 
     @GetMapping(value = ["/ws/{zipCode}/json"], consumes = [MediaType.APPLICATION_JSON_VALUE])
