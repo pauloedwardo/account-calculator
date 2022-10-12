@@ -8,5 +8,5 @@ data class Account (
     @Id val id: String? = null,
     val name: String,
     val document: String,
-    var balance: Long? = 0,
+    var balance: Long = 0,
     val zipCode: String)

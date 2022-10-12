@@ -15,7 +15,7 @@ class UpdateBalanceService(val addressService: AddressService) {
         if (response != null && "SP" == response.uf) {
             logger.info("Updating account balance...")
 
-            account.balance = account.balance?.times(2)
+            account.balance = account.balance.times(2)
         }
 
         return account
