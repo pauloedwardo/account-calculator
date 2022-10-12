@@ -31,7 +31,10 @@ dependencies {
 //	testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.mockk:mockk:1.13.2")
-	implementation("com.github.tomakehurst:wiremock-jre8:2.34.0")
+	testImplementation("com.github.tomakehurst:wiremock-jre8:2.34.0")
+	testImplementation("redis.clients:jedis:4.3.0")
+	testImplementation("com.github.fppt:jedis-mock:1.0.4")
+
 }
 
 dependencyManagement {

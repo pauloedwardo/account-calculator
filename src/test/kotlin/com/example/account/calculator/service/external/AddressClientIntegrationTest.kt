@@ -15,7 +15,6 @@ import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.ContextConfiguration
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-//@ContextConfiguration(classes = [AddressClient::class])
 @WireMockTest(httpPort = 8090)
 @ActiveProfiles("test")
 class AddressClientIntegrationTest {

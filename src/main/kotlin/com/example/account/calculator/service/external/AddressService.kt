@@ -10,7 +10,7 @@ private val logger = KotlinLogging.logger {}
 @Service
 class AddressService(val addressClient: AddressClient) {
 
-    @Cacheable(cacheNames = ["zipcode-account-cache"], key = "#zipCode")
+    @Cacheable(cacheNames = ["zipcode-account-cache"], key = "#zipCode", unless = "#result == null")
     fun get(zipCode: String): Address? {
         logger.info("Calling address api to zipcode $zipCode")
 
