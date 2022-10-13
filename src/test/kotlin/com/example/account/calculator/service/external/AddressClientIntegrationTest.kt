@@ -12,7 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.test.context.ActiveProfiles
-import org.springframework.test.context.ContextConfiguration
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 @WireMockTest(httpPort = 8090)

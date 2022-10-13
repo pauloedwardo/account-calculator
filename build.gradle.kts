@@ -9,7 +9,6 @@ plugins {
 }
 
 group = "com.example.account.calculator"
-//version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
@@ -28,12 +27,13 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 	implementation ("io.github.microutils:kotlin-logging-jvm:2.0.11")
-//	testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
+	testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.mockk:mockk:1.13.2")
 	testImplementation("com.github.tomakehurst:wiremock-jre8:2.34.0")
 	testImplementation("redis.clients:jedis:4.3.0")
 	testImplementation("com.github.fppt:jedis-mock:1.0.4")
+	testImplementation("com.ninja-squad:springmockk:3.1.1")
 
 }
 
