@@ -36,8 +36,6 @@ class AddressServiceTest {
 
     @Test
     fun `should get address null due an exception`() {
-        val address = buildAddress()
-
         every { addressClient.getAddress("18013004") } throws Exception("Address client timeout")
 
         val result = addressService.get("18013004")
